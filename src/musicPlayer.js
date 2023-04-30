@@ -1,4 +1,4 @@
- function musicPlayer() {
+ function MusicPlayer() {
     return (
       <div className="bar">
         <div className="bar__content">
@@ -80,4 +80,4 @@
     );
   };
 
-export default musicPlayer;
+export default MusicPlayer;

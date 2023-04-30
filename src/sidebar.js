@@ -1,4 +1,4 @@
-function sidebar() {
+function Sidebar() {
     return (
       <div className="main__sidebar sidebar">
         <div className="sidebar__personal">
@@ -28,4 +28,4 @@ function sidebar() {
     );
   };
 
-  export default sidebar
+  export default Sidebar

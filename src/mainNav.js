@@ -1,4 +1,4 @@
-function mainNav() {
+function MainNav() {
     return (
       <nav className="main__nav nav">
         <div className="nav__logo logo">
@@ -32,4 +32,4 @@ function mainNav() {
     );
   }
 
-  export default mainNav
+  export default MainNav

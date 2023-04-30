@@ -1,17 +1,17 @@
 import './fonts and style/css/style.css';
-import mainNav from "./mainNav";
-import centerBlock from "./centerBlock";
-import sidebar from "./sidebar";
-import musicPlayer from "./musicPlayer";
+import MainNav from "./mainNav";
+import CenterBlock from "./centerBlock";
+import Sidebar from "./sidebar";
+import MusicPlayer from "./musicPlayer";
 
 function App() {
   return (
     <div>
       <div>
-        <mainNav/>
-        <centerBlock/>
-        <sidebar/>
-        <musicPlayer/>
+        <MainNav/>
+        <CenterBlock/>
+        <Sidebar/>
+        <MusicPlayer/>
       </div>
    </div>
    )

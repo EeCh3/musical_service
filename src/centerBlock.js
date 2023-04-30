@@ -1,6 +1,6 @@
- import { playlistItem } from "./playlistItem";
+ import { PlaylistItem } from "./playlistItem";
 
- function centerBlock() {
+ function CenterBlock() {
     return (
         <div className="centerblock">
             <div className="centerblock__search search">
@@ -16,9 +16,9 @@
                 <div className="filter__button button-year _btn-text">году выпуска</div>
                 <div className="filter__button button-genre _btn-text">жанру</div>
             </div>
-            <div className='centerblock__content'><playlistItem /></div>
+            <div className='centerblock__content'><PlaylistItem /></div>
         </div>
     );
   };
 
-export default centerBlock;
+export default CenterBlock;

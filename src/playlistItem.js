@@ -1,4 +1,4 @@
-function playlistItem() {
+function PlaylistItem() {
     return (
       <div className="content__playlist playlist">
         <div className="playlist__item">
@@ -37,4 +37,4 @@ function playlistItem() {
     );
   };
 
-export default playlistItem;
+export default PlaylistItem;
