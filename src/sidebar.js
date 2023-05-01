@@ -1,3 +1,7 @@
+import sidebarImg from "./fonts and style/img/playlist01.png";
+import sidebarImg2 from "./fonts and style/img/playlist02.png";
+import sidebarImg3 from "./fonts and style/img/playlist03.png";
+
 function Sidebar() {
     return (
       <div className="main__sidebar sidebar">
@@ -9,17 +13,17 @@ function Sidebar() {
           <div className="sidebar__list">
             <div className="sidebar__item">
               <a className="sidebar__link" href="/">
-                <img className="sidebar__img" src="/musical_service/src/fonts and style/img/playlist01.png" alt="day's playlist" />
+                <img className="sidebar__img" src={sidebarImg} alt="day's playlist" />
               </a>
             </div>
             <div className="sidebar__item">
               <a className="sidebar__link" href="/">
-                <img className="sidebar__img" src="/musical_service/src/fonts and style/img/playlist02.png" alt="day's playlist" />
+                <img className="sidebar__img" src={sidebarImg2} alt="day's playlist" />
               </a>
             </div>
             <div className="sidebar__item">
               <a className="sidebar__link" href="/">
-                <img className="sidebar__img" src="/musical_service/src/fonts and style/img/playlist03.png" alt="day's playlist" />
+                <img className="sidebar__img" src={sidebarImg3} alt="day's playlist" />
               </a>
             </div>
           </div>

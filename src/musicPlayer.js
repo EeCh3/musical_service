@@ -1,3 +1,6 @@
+ import sprite from "./fonts and style/img/icon/sprite.svg";
+
+
  function MusicPlayer() {
     return (
       <div className="bar">
@@ -8,27 +11,27 @@
               <div className="player__controls">
                 <div className="player__btn-prev">
                   <svg className="player__btn-prev-svg" alt="prev">
-                    <use xlinkHref="/musical_service/src/fonts and style/img/icon/sprite.svg#icon-prev" />
+                     <use xlinkHref={`${sprite}#icon-prev`} />
                   </svg>
                 </div>
                 <div className="player__btn-play _btn">
                   <svg className="player__btn-play-svg" alt="play">
-                    <use xlinkHref="/musical_service/src/fonts and style/img/icon/sprite.svg#icon-play" />
+                  <use xlinkHref={`${sprite}#icon-play`} />
                   </svg>
                 </div>
                 <div className="player__btn-next">
                   <svg className="player__btn-next-svg" alt="next">
-                    <use xlinkHref="/musical_service/src/fonts and style/img/icon/sprite.svg#icon-next" />
+                  <use xlinkHref={`${sprite}#icon-next`} />
                   </svg>
                 </div>
                 <div className="player__btn-repeat _btn-icon">
                   <svg className="player__btn-repeat-svg" alt="repeat">
-                    <use xlinkHref="/musical_service/src/fonts and style/img/icon/sprite.svg#icon-repeat" />
+                  <use xlinkHref={`${sprite}#icon-repeat`} />
                   </svg>
                 </div>
                 <div className="player__btn-shuffle _btn-icon">
                   <svg className="player__btn-shuffle-svg" alt="shuffle">
-                    <use xlinkHref="/musical_service/src/fonts and style/img/icon/sprite.svg#icon-shuffle" />
+                  <use xlinkHref={`${sprite}#icon-shuffle`} />
                   </svg>
                 </div>
               </div>
@@ -37,7 +40,7 @@
                 <div className="track-play__contain">
                   <div className="track-play__image">
                     <svg className="track-play__svg" alt="music">
-                      <use xlinkHref="/musical_service/src/fonts and style/img/icon/sprite.svg#icon-note" />
+                    <use xlinkHref={`${sprite}#icon-note`} />
                     </svg>
                   </div>
                   <div className="track-play__author">
@@ -51,12 +54,12 @@
                 <div className="track-play__like-dis">
                   <div className="track-play__like _btn-icon">
                     <svg className="track-play__like-svg" alt="like">
-                      <use xlinkHref="/musical_service/src/fonts and style/img/icon/sprite.svg#icon-like" />
+                    <use xlinkHref={`${sprite}#icon-like`} />
                     </svg>
                   </div>
                   <div className="track-play__dislike _btn-icon">
                     <svg className="track-play__dislike-svg" alt="dislike">
-                      <use xlinkHref="/musical_service/src/fonts and style/img/icon/sprite.svg#icon-dislike" />
+                    <use xlinkHref={`${sprite}#icon-dislike`} />
                     </svg>
                   </div>
                 </div>
@@ -66,7 +69,7 @@
         <div className="volume__content">
           <div className="volume__image">
             <svg className="volume__svg" alt="volume">
-              <use xlinkHref="/musical_service/src/fonts and style/img/icon/sprite.svg#icon-volume" />
+            <use xlinkHref={`${sprite}#icon-volume`} />
             </svg>
           </div>
           <div className="volume__progress _btn">

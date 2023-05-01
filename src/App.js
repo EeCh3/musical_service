@@ -6,14 +6,16 @@ import MusicPlayer from "./musicPlayer";
 
 function App() {
   return (
-    <div>
-      <div>
+    <div className="wrapper" >
+      <div className="container">
+      <main className="main">
         <MainNav/>
         <CenterBlock/>
         <Sidebar/>
         <MusicPlayer/>
+      </main>
       </div>
-   </div>
+    </div>
    )
    }
 
