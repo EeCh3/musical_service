@@ -9,10 +9,10 @@ function App() {
     <div className="wrapper" >
       <div className="container">
       <main className="main">
-        <MainNav/>
-        <CenterBlock/>
-        <Sidebar/>
-        <MusicPlayer/>
+      <MainNav/>
+      <CenterBlock/>
+      <Sidebar/>
+      <MusicPlayer/>
       </main>
       </div>
     </div>
