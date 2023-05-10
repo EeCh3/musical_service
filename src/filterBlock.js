@@ -24,7 +24,7 @@ function FilterBlock() {
     return (
       <div className="centerblock__filter filter">
         <div className="filter__title">Искать по:</div>
-        <div><AuthorButton onClick={() => {toggleVisibility("author"); handleButtonClick()}}/>
+        <div><AuthorButton onClick={() => {toggleVisibility("author"); handleButtonClick() }} isActive={isActive}/>
         {visible === "author" && <FilterOptions/>}</div>
         <div><YearButton onClick={() => toggleVisibility("year")}/>
         {visible === "year" && <FilterOptions/>}</div>
