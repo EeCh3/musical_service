@@ -242,6 +242,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 51px;
+  gap: 10px;
 }
 
 .centerblock__content {
@@ -325,7 +326,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid;
   border-radius: 60px;
   padding: 6px 20px;
 }

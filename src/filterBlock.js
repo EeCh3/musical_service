@@ -24,11 +24,11 @@ function FilterBlock() {
     return (
       <div className="centerblock__filter filter">
         <div className="filter__title">Искать по:</div>
-        <div><AuthorButton onClick={() => {toggleVisibility("author"); handleButtonClick() }} isActive={isActive}/>
+        <div><AuthorButton onClick={() => {toggleVisibility("author"); handleButtonClick() }}/>
         {visible === "author" && <FilterOptions/>}</div>
-        <div><YearButton onClick={() => toggleVisibility("year")}/>
+        <div><YearButton onClick={() => {toggleVisibility("year"); handleButtonClick() }}/>
         {visible === "year" && <FilterOptions/>}</div>
-        <div><GenreButton onClick={() => {toggleVisibility("genre"); handleButtonClick()}}/>
+        <div><GenreButton onClick={() => {toggleVisibility("genre"); handleButtonClick() }}/>
         {visible === "genre" && <FilterOptions/>}</div>
       </div>
     );
