@@ -70,7 +70,19 @@ body {
   cursor: pointer;
 }
 
-._btn-text_active {
+._year-text_active {
+  border-color: #AD61FF;
+  color: #AD61FF;
+  cursor: pointer;
+}
+
+._genre-text_active {
+  border-color: #AD61FF;
+  color: #AD61FF;
+  cursor: pointer;
+}
+
+._author-text_active {
   border-color: #AD61FF;
   color: #AD61FF;
   cursor: pointer;
@@ -331,9 +343,9 @@ body {
   padding: 6px 20px;
 }
 
-.filter__button:not(:last-child) {
+/* .filter__button:not(:last-child) {
   margin-right: 10px;
-}
+} */
 
 .content__title {
   display: -webkit-box;
