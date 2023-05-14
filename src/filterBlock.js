@@ -8,31 +8,44 @@ import YearButton from "./yearButton";
 import GenreButton from "./genreButton";
 
 function FilterBlock() {
-  
-  const [visible, setVisible] = useState(null)
+  const [visible, setVisible] = useState(null);
 
-  const toggleVisibility = (filter) => {
-    setVisible(visible === filter ? null : filter)
-  }
-
-  const [isActive, setIsActive] = useState(false);
-  const handleButtonClick = () => {
-    setIsActive(!isActive);
+  const handleButtonClick = (filter) => {
+    setVisible((currentVisible) => (currentVisible === filter ? null : filter));
   };
 
-
-    return (
-      <div className="centerblock__filter filter">
-        <div className="filter__title">Искать по:</div>
-        <div><AuthorButton onClick={() => {toggleVisibility("author"); handleButtonClick() }}/>
-        {visible === "author" && <FilterOptions/>}</div>
-        <div><YearButton onClick={() => {toggleVisibility("year"); handleButtonClick() }}/>
-        {visible === "year" && <FilterOptions/>}</div>
-        <div><GenreButton onClick={() => {toggleVisibility("genre"); handleButtonClick() }}/>
-        {visible === "genre" && <FilterOptions/>}</div>
+  return (
+    <div className="centerblock__filter filter">
+      <div className="filter__title">Искать по:</div>
+      <div>
+        <AuthorButton
+          isActive={visible === "author"}
+          onClick={() => {
+            handleButtonClick("author");
+          }}
+        />
+        {visible === "author" && <FilterOptions />}
       </div>
-    );
-  };
-
+      <div>
+        <YearButton
+          isActive={visible === "year"}
+          onClick={() => {
+            handleButtonClick("year");
+          }}
+        />
+        {visible === "year" && <FilterOptions />}
+      </div>
+      <div>
+        <GenreButton
+          isActive={visible === "genre"}
+          onClick={() => {
+            handleButtonClick("genre");
+          }}
+        />
+        {visible === "genre" && <FilterOptions />}
+      </div>
+    </div>
+  );
+}
 
 export default FilterBlock;

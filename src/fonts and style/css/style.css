@@ -70,19 +70,7 @@ body {
   cursor: pointer;
 }
 
-._year-text_active {
-  border-color: #AD61FF;
-  color: #AD61FF;
-  cursor: pointer;
-}
-
-._genre-text_active {
-  border-color: #AD61FF;
-  color: #AD61FF;
-  cursor: pointer;
-}
-
-._author-text_active {
+._btn-text_active {
   border-color: #AD61FF;
   color: #AD61FF;
   cursor: pointer;
