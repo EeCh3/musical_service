@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useState } from "react";
+import styled from "styled-components";
 import FilterOptions from "./filterOptions";
 import AuthorButton from "./authorButton";
 import YearButton from "./yearButton";
@@ -14,9 +15,34 @@ function FilterBlock() {
     setVisible((currentVisible) => (currentVisible === filter ? null : filter));
   };
 
+  const CenterBlockFilter = styled.div`
+  position: relative;
+    z-index: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 51px;
+    gap: 10px;
+  `;
+
+  const FilterTitle = styled.div`
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 15px;
+  `;
+
   return (
-    <div className="centerblock__filter filter">
-      <div className="filter__title">Искать по:</div>
+    <CenterBlockFilter>
+      <FilterTitle>Искать по:</FilterTitle>
       <div>
         <AuthorButton
           isActive={visible === "author"}
@@ -44,7 +70,7 @@ function FilterBlock() {
         />
         {visible === "genre" && <FilterOptions />}
       </div>
-    </div>
+    </CenterBlockFilter>
   );
 }
 

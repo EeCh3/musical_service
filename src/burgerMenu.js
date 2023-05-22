@@ -1,26 +1,41 @@
+import styled from "styled-components";
+
+const NavMenu = styled.div`
+  display: block;
+  visibility: visible;
+`;
+
+const MenuList = styled.ul`
+  padding: 18px 0 10px 0;
+`;
+
+const MenuItem = styled.li`
+  padding: 5px 0;
+  margin-bottom: 16px;
+`;
+
+const MenuLink = styled.a`
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+`;
 
 function BurgerMenu() {
-
     return (
-        <div className="nav__menu menu">
-          <ul className="menu__list">
-            <li className="menu__item">
-              <a href="http://" className="menu__link">
-                Главное
-              </a>
-            </li>
-            <li className="menu__item">
-              <a href="http://" className="menu__link">
-                Мой плейлист
-              </a>
-            </li>
-            <li className="menu__item">
-              <a href="http://" className="menu__link">
-                Войти
-              </a>
-            </li>
-          </ul>
-        </div>
+      <NavMenu>
+        <MenuList>
+          <MenuItem>
+            <MenuLink href="http://">Главное</MenuLink>
+          </MenuItem>
+          <MenuItem>
+            <MenuLink href="http://">Мой плейлист</MenuLink>
+          </MenuItem>
+          <MenuItem>
+            <MenuLink href="http://">Войти</MenuLink>
+          </MenuItem>
+        </MenuList>
+      </NavMenu>
     );
   }
 
