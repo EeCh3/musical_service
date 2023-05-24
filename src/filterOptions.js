@@ -11,48 +11,50 @@
 //   };
 
 // export default FilterOptions;
-import styled from "styled-components";
+// import styled from "styled-components";
 
-const Options = styled.ul`
-    position: absolute;
-    z-index: 2;
-    z-index:2;
-    background-color: #313131;
-    width: 248px;
-    border-radius: 12px;
+// const Options = styled.ul`
+//     position: absolute;
+//     z-index: 2;
+//     z-index:2;
+//     background-color: #313131;
+//     width: 248px;
+//     border-radius: 12px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 34px;
-    gap: 10px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     padding: 34px;
+//     gap: 10px;
 
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    text-decoration-line: underline;
-    color: #B672FF;
-`;
+//     font-weight: 400;
+//     font-size: 20px;
+//     line-height: 24px;
+//     text-decoration-line: underline;
+//     color: #B672FF;
+// `;
 
-const DropdownItem = styled.a`
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
+// const DropdownItem = styled.a`
+//     font-weight: 400;
+//     font-size: 20px;
+//     line-height: 24px;
 
-    text-decoration-line: underline;
-    font-feature-settings: 'pnum' on, 'lnum' on;
+//     text-decoration-line: underline;
+//     font-feature-settings: 'pnum' on, 'lnum' on;
 
-    color: #B672FF;
-`;
+//     color: #B672FF;
+// `;
+
+import * as S from "./styles";
 
 function FilterOptions() {
     return (
         <div>
-            <Options>
-                <li><DropdownItem>Option 1</DropdownItem></li>
-                <li><DropdownItem>Option 2</DropdownItem></li>
-                <li><DropdownItem>Option 3</DropdownItem></li>
-            </Options>
+            <S.Options>
+                <li><S.DropdownItem>Option 1</S.DropdownItem></li>
+                <li><S.DropdownItem>Option 2</S.DropdownItem></li>
+                <li><S.DropdownItem>Option 3</S.DropdownItem></li>
+            </S.Options>
         </div>
     );
   };
