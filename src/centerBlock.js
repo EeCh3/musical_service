@@ -92,6 +92,8 @@ import FilterBlock from "./filterBlock"
 //             flex-direction: column;
 // `;
 
+
+
 import * as S from "./styles";
 
  function CenterBlock() {
@@ -107,6 +109,12 @@ import * as S from "./styles";
                 <FilterBlock/>
             </S.CenterBlockFilter>
             <S.CenterBlockContent>
+                <S.PlaylistTitle>
+                    <S.PlaylistTitleCol>ТРЕК</S.PlaylistTitleCol>
+                    <S.PlaylistTitleCol2>ИСПОЛНИТЕЛЬ</S.PlaylistTitleCol2>
+                    <S.PlaylistTitleCol3>АЛЬБОМ</S.PlaylistTitleCol3>
+                    <S.PlaylistTitleCol4></S.PlaylistTitleCol4>
+                </S.PlaylistTitle>
                 <PlaylistItem/>
             </S.CenterBlockContent>
         </S.MainCenterBlock>

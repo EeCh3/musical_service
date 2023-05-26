@@ -72,7 +72,7 @@ export const Author = styled.div`
 
 export const NavBurger = styled.div`
   width: 20px;
-  height: 36px;
+  height: 10px;
   padding: 13px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -119,7 +119,7 @@ export const MainCenterBlock = styled.div`
     -webkit-box-flex: 3;
         -ms-flex-positive: 3;
             flex-grow: 3;
-    padding: 20px 40px 20px 111px;
+    padding: 20px 100px 20px 60px;
 `;
 
 export const CenterBlockSearch = styled.div`
@@ -189,7 +189,7 @@ position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 51px;
+  margin-bottom: 25px;
   gap: 10px;
 `;
 
@@ -202,6 +202,73 @@ export const CenterBlockContent =  styled.div`
         -ms-flex-direction: column;
             flex-direction: column;
 `;
+
+export const PlaylistTitle = styled.div`
+    display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin-bottom: 24px;
+`;
+
+export const PlaylistTitleCol = styled.div`
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: #696969;
+    text-transform: uppercase;
+
+    width: 447px;
+`;
+
+export const PlaylistTitleCol2 = styled.div`
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: #696969;
+    text-transform: uppercase;
+
+    width: 321px;
+`;
+
+export const PlaylistTitleCol3 = styled.div`
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: #696969;
+    text-transform: uppercase;
+
+    width: 245px;
+`;
+
+export const PlaylistTitleCol4 = styled.div`
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: #696969;
+    text-transform: uppercase;
+
+    width: 60px;
+    text-align: end;
+`;
+
 
 // export const CenterBlockFilter = styled.div`
 //   position: relative;
@@ -327,6 +394,7 @@ export const BarPlayerProgress = styled.div`
 `;
 
 export const BarPlayerBlock = styled.div`
+padding-right: 53px;
   height: 73px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -550,6 +618,7 @@ export const TrackPlayDislikeSvg = styled.svg`
 `;
 
 export const VolumeContent = styled.div`
+padding 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -578,10 +647,13 @@ export const VolumeSvg = styled.svg`
 `;
 
 export const VolumeProgress = styled.div`
+
+
   width: 109px;
 `;
 
 export const VolumeProgressLine = styled.input`
+ 
   width: 109px;
 `;
 
@@ -633,8 +705,8 @@ export const TrackTitle = styled.div`
 `;
 
 export const TrackTitleImage = styled.div`
-  width: 51px;
-  height: 51px;
+  // width: 51px;
+  // height: 51px;
   padding: 16px;
   background: #313131;
   display: -webkit-box;
@@ -722,7 +794,7 @@ export const TrackTimeText = styled.span`
 
 export const MainSidebar = styled.div`
   max-width: 418px;
-  padding: 20px 90px 20px 78px;
+  padding: 20px 40px 20px 0;
 `;
 
 export const SidebarPersonal = styled.div`
@@ -739,7 +811,7 @@ export const SidebarPersonal = styled.div`
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 12px 0 15px 0;
+  padding: 12px 80px 15px 0px
 `;
 
 export const SidebarPersonalName = styled.p`
@@ -760,7 +832,7 @@ export const SidebarAvatar = styled.div`
 
 export const SidebarBlock = styled.div`
 height: 100%;
-  padding: 240px 0 0 0;
+  padding: 240px 80px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

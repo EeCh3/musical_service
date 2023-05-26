@@ -29,7 +29,7 @@ function GenreButton({onClick, isActive}) {
   };
     return (
       <S.Author onClick={handleButtonClick} 
-      className = {`filter__button button-author ${isActive ? '_btn-text_active _btn-icon_active' : ''}`}>автору</S.Author>
+      className = {`filter__button button-author ${isActive ? '_btn-text_active _btn-icon_active' : ''}`}>исполнителю</S.Author>
     )
 }
 
