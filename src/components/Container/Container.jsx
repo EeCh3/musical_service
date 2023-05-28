@@ -1,8 +1,8 @@
 import * as S from "./Container";
 
-function Container() {
+function Container({ children }) {
     return (
-      <S.Container />
+      <S.Container>{children}</S.Container>
     )
 }
 

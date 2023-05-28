@@ -1,8 +1,8 @@
 import * as S from "./Wrapper";
 
-function Wrapper() {
+function Wrapper({ children }) {
     return (
-      <S.Wrapper />
+      <S.Wrapper>{children}</S.Wrapper>
     )
 }
 

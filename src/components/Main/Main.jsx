@@ -1,8 +1,8 @@
 import * as S from "./Main";
 
-function Main() {
+function Main({ children }) {
     return (
-      <S.Main />
+      <S.Main>{children}</S.Main>
     )
 }
 
