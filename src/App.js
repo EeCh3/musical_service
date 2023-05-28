@@ -1,12 +1,13 @@
 // import './fonts and style/css/style.css';
 import { createGlobalStyle } from "styled-components";
-import * as S from "./styles";
 
-import MainNav from "./mainNav";
-import CenterBlock from "./centerBlock";
-import Sidebar from "./sidebar";
-import MusicPlayer from "./musicPlayer";
-
+import Wrapper from "./components/Wrapper/Wrapper.jsx";
+import Container from "./components/Container/Container.jsx";
+import Main from "./components/Main/Main.jsx";
+import MainNav from "./components/mainNav/mainNav.jsx";
+import CenterBlock from "./components/centerBlock/centerBlock.jsx";
+import Sidebar from "./components/sidebar/sidebar.jsx";
+import MusicPlayer from "./components/musicPlayer/musicPlayer.jsx";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -34,17 +35,16 @@ function App() {
   return (
     <>
       <GlobalStyle/>
-      <S.Wrapper>
-        <S.Container>
-          <S.Main>
+      <Wrapper>
+        <Container>
+          <Main>
             <MainNav/>
             <CenterBlock/>
             <Sidebar/>
             <MusicPlayer/>
-          </S.Main>
-        </S.Container>
-      </S.Wrapper>
-
+          </Main>
+        </Container>
+      </Wrapper>
     </>
 
    )
