@@ -1,5 +1,6 @@
 // import './fonts and style/css/style.css';
 import { createGlobalStyle } from "styled-components";
+import { AppRoutes } from "./routes.jsx";
 
 import Wrapper from "./components/Wrapper/Wrapper.jsx";
 import Container from "./components/Container/Container.jsx";
@@ -37,6 +38,7 @@ function App() {
       <GlobalStyle/>
       <Wrapper>
         <Container>
+        <AppRoutes/>
           <Main>
             <MainNav/>
             <CenterBlock/>
@@ -46,8 +48,7 @@ function App() {
         </Container>
       </Wrapper>
     </>
-
    )
-   }
+}
 
 export default App;
