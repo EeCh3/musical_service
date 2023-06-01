@@ -1,6 +1,6 @@
 // import './fonts and style/css/style.css';
 import { createGlobalStyle } from "styled-components";
-import { AppRoutes } from "./routes.jsx";
+import { AppRoutes } from "./routes";
 
 import Wrapper from "./components/Wrapper/Wrapper.jsx";
 import Container from "./components/Container/Container.jsx";
@@ -38,13 +38,13 @@ function App() {
       <GlobalStyle/>
       <Wrapper>
         <Container>
-        <AppRoutes/>
-          <Main>
-            <MainNav/>
-            <CenterBlock/>
-            <Sidebar/>
-            <MusicPlayer/>
-          </Main>
+          <AppRoutes/>
+            <Main>
+              <MainNav/>
+              <CenterBlock/>
+              <Sidebar/>
+              <MusicPlayer/>
+            </Main>
         </Container>
       </Wrapper>
     </>
