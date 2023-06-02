@@ -2,10 +2,10 @@
 import styled from "styled-components";
 
 export const RegisterButton = styled.button`
-    width: 366px;
-    height: 439px;
-    left: 777px;
-    top: 320.5px;
+    width: 278px;
+    height: 52px;
+    left: 41px;
+    top: 268px;
 
     background: #FFFFFF;
     border-radius: 12px;

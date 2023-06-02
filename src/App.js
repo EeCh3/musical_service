@@ -2,13 +2,13 @@
 import { createGlobalStyle } from "styled-components";
 import { AppRoutes } from "./routes";
 
-import Wrapper from "./components/Wrapper/Wrapper.jsx";
-import Container from "./components/Container/Container.jsx";
-import Main from "./components/Main/Main.jsx";
-import MainNav from "./components/mainNav/mainNav.jsx";
-import CenterBlock from "./components/centerBlock/centerBlock.jsx";
-import Sidebar from "./components/sidebar/sidebar.jsx";
-import MusicPlayer from "./components/musicPlayer/musicPlayer.jsx";
+// import Wrapper from "./components/Wrapper/Wrapper";
+// import Container from "./components/Container/Container";
+// import Main from "./components/Main/Main";
+// import MainNav from "./components/mainNav/mainNav";
+// import CenterBlock from "./components/centerBlock/centerBlock";
+// import Sidebar from "./components/sidebar/sidebar";
+// import MusicPlayer from "./components/musicPlayer/musicPlayer";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -32,21 +32,30 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+// function App() {
+//   return (
+//     <>
+//       <GlobalStyle/>
+//       <Wrapper>
+//         <Container>
+//         <AppRoutes/>
+//             <Main> 
+//               <MainNav/>
+//               <CenterBlock/>
+//               <Sidebar/>
+//               <MusicPlayer/>
+//             </Main>
+//         </Container>
+//       </Wrapper>
+//     </>
+//    )
+// }
+
 function App() {
   return (
     <>
       <GlobalStyle/>
-      <Wrapper>
-        <Container>
-          <AppRoutes/>
-            <Main>
-              <MainNav/>
-              <CenterBlock/>
-              <Sidebar/>
-              <MusicPlayer/>
-            </Main>
-        </Container>
-      </Wrapper>
+        <AppRoutes/>
     </>
    )
 }

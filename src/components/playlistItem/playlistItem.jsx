@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 
-import * as S from "./playlistItem";
+import * as S from "./playlistItem.style";
 
 function PlaylistItem() {
   const [isLoading, setIsLoading] = useState(true);

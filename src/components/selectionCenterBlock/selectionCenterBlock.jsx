@@ -1,11 +1,11 @@
 /* eslint-disable react/self-closing-comp */
 // import styled from "styled-components";
 import PlaylistItem from "../playlistItem/playlistItem";
-import FilterBlock from "../filterBlock/filterBlock"
 
-import * as S from "./centerBlock.style";
 
- function CenterBlock() {
+import * as S from "../centerBlock/centerBlock.style";
+
+ function SelectionCenterBlock() {
     return (
         <S.MainCenterBlock>
             <S.CenterBlockSearch>
@@ -14,9 +14,6 @@ import * as S from "./centerBlock.style";
                 <S.SearchText type="search" placeholder="Поиск" name="search"></S.SearchText>
             </S.CenterBlockSearch>
             <S.CenterBlockH2>Треки</S.CenterBlockH2>
-            <S.CenterBlockFilter>
-                <FilterBlock/>
-            </S.CenterBlockFilter>
             <S.CenterBlockContent>
                 <S.PlaylistTitle>
                     <S.PlaylistTitleCol>ТРЕК</S.PlaylistTitleCol>
@@ -30,4 +27,4 @@ import * as S from "./centerBlock.style";
     );
   };
 
-export default CenterBlock;
+export default SelectionCenterBlock;

@@ -1,4 +1,4 @@
-import * as S from "./Container";
+import * as S from "./Container.style";
 
 function Container({ children }) {
     return (

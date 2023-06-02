@@ -8,7 +8,7 @@ import sidebarImg from "../../fonts and style/img/playlist01.png";
 import sidebarImg2 from "../../fonts and style/img/playlist02.png";
 import sidebarImg3 from "../../fonts and style/img/playlist03.png";
 
-import * as S from "./sidebar";
+import * as S from "./sidebar.style";
 
 function Sidebar() {
   const [isLoading, setIsLoading] = useState(true);

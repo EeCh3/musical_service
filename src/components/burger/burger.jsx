@@ -1,5 +1,5 @@
 /* eslint-disable react/self-closing-comp */
-import * as S from "./burger";
+import * as S from "./burger.style";
 
 function Burger({onClick}) {
   return (

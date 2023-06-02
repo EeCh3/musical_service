@@ -1,4 +1,4 @@
-import * as S from "./genreButton";
+import * as S from "./genreButton.style";
 
 function GenreButton({onClick, isActive}) {
   const handleButtonClick = () => {

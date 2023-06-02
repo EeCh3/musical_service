@@ -1,4 +1,4 @@
-import * as S from "./filterOptions";
+import * as S from "./filterOptions.style";
 
 function FilterOptions() {
     return (

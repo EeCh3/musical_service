@@ -1,5 +1,5 @@
 /* eslint-disable react/self-closing-comp */
-import * as S from "./registerButton";
+import * as S from "./registerButton.style";
 
 function RegisterButton({onClick}) {
   return (

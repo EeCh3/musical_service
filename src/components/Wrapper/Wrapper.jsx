@@ -1,4 +1,4 @@
-import * as S from "./Wrapper";
+import * as S from "./Wrapper.style";
 
 function Wrapper({ children }) {
     return (

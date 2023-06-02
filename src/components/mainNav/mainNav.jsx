@@ -5,7 +5,7 @@ import logo from "../../fonts and style/img/logo.png";
 import Burger from "../burger/burger.jsx";
 import BurgerMenu from "../burgerMenu/burgerMenu.jsx";
 
-import * as S from "./mainNav";
+import * as S from "./mainNav.style";
 
 function MainNav() {
   const [visible, setVisible] = useState(false)

@@ -1,5 +1,5 @@
 /* eslint-disable react/self-closing-comp */
-import * as S from "./loginButton";
+import * as S from "./loginButton.style";
 
 function LoginButton({onClick}) {
   return (

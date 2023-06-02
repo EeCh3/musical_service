@@ -5,7 +5,7 @@ import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 import sprite from "../../fonts and style/img/icon/sprite.svg";
 
-import * as S from "./musicPlayer";
+import * as S from "./musicPlayer.style";
 
  function MusicPlayer() {
   const [isLoading, setIsLoading] = useState(true);

@@ -1,5 +1,5 @@
 /* eslint-disable react/self-closing-comp */
-import * as S from "./loginInput";
+import * as S from "./loginInput.style";
 
 function Input() {
   return (

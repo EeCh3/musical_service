@@ -1,9 +1,10 @@
-import LoginWindow from "../../components/loginWindow/loginWindow";
+/* eslint-disable import/prefer-default-export */
+import LoginForm from "../../components/loginForm/loginForm";
 
 function LoginPage() {
     return (
-        <LoginWindow/>
+        <LoginForm/>
     )
 }
 
-export default LoginPage
+export { LoginPage }

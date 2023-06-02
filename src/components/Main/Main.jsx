@@ -1,4 +1,4 @@
-import * as S from "./Main";
+import * as S from "./Main.style";
 
 function Main({ children }) {
     return (

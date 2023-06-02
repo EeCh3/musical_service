@@ -1,4 +1,4 @@
-import * as S from "./burgerMenu";
+import * as S from "./burgerMenu.style";
 
 function BurgerMenu() {
     return (

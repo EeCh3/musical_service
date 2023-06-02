@@ -2,11 +2,11 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useState } from "react";
-import FilterOptions from "../filterOptions/filterOptions.jsx";
-import AuthorButton from "../authorButton/authorButton.jsx";
-import YearButton from "../yearButton/yearButton.jsx";
-import GenreButton from "../genreButton/genreButton.jsx";
-import * as S from "./filterBlock";
+import FilterOptions from "../filterOptions/filterOptions";
+import AuthorButton from "../authorButton/authorButton";
+import YearButton from "../yearButton/yearButton";
+import GenreButton from "../genreButton/genreButton";
+import * as S from "./filterBlock.style";
 
 function FilterBlock() {
     const [visible, setVisible] = useState(null);
