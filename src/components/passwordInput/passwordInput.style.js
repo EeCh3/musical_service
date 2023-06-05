@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import styled from "styled-components";
 
-export const LoginInput = styled.input`
+export const PasswordInput = styled.input`
     width: 278.5px;
 
     left: 40.5px;

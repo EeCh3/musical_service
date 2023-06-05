@@ -1,10 +1,10 @@
 /* eslint-disable react/self-closing-comp */
 import * as S from "./loginInput.style";
 
-function Input() {
+function LoginInput({setUser}) {
   return (
-    <S.Input></S.Input>
+    <S.LoginInput setUser={setUser}></S.LoginInput>
   );
 }
 
-export default Input
+export default LoginInput

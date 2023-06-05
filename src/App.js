@@ -1,4 +1,5 @@
 // import './fonts and style/css/style.css';
+import { useState } from "react";
 import { createGlobalStyle } from "styled-components";
 import { AppRoutes } from "./routes";
 
@@ -52,10 +53,11 @@ const GlobalStyle = createGlobalStyle`
 // }
 
 function App() {
+  const [user, setUser] = useState(null);
   return (
     <>
       <GlobalStyle/>
-        <AppRoutes/>
+        <AppRoutes user={user} setUser={setUser}/>
     </>
    )
 }
