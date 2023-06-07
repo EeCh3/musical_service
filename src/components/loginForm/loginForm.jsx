@@ -5,8 +5,7 @@ import { useState } from "react";
 import * as S from "./loginForm.style";
 import Wrapper from "../Wrapper/Wrapper";
 import Container from "../Container/Container";
-import LoginInput from "../loginInput/loginInput";
-import PasswordInput from "../passwordInput/passwordInput";
+import Input from "../input/Input";
 import LoginButton from "../loginButton/loginButton";
 import RegisterButton from "../registerButton/registerButton";
 import logoBlack from "../../fonts and style/img/logo_black.png"
@@ -43,12 +42,12 @@ function LoginForm({setUser}) {
               <S.LogoBlack src={logoBlack} alt="logoBlack"></S.LogoBlack> 
             </S.LogoDiv>
             <S.InputsDiv>
-              <LoginInput placeholder="Логин" value={username} onChange={handleUsernameChange}></LoginInput>
-              <PasswordInput placeholder="Пароль" value={password} onChange={handlePasswordChange}></PasswordInput> 
+              <Input placeholder="Логин" value={username} onChange={handleUsernameChange}></Input>
+              <Input placeholder="Пароль" value={password} onChange={handlePasswordChange}></Input> 
             </S.InputsDiv>
             <S.ButtonsDiv>
               <LoginButton onClick={handleLogin}>Войти</LoginButton>
-              <RegisterButton onClick={handleRegister}>Зарегистрироваться</RegisterButton> 
+              <RegisterButton page="login" onClick={handleRegister}>Зарегистрироваться</RegisterButton> 
             </S.ButtonsDiv>
           </S.LoginBox>
         </Container>

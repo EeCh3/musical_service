@@ -11,9 +11,8 @@ export const RegisterButton = styled.button`
     border-radius: 6px;
 
     background: #FFFFFF;
+
     border-radius: 12px;
-    font-family: 'StratosSkyeng';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
@@ -24,3 +23,5 @@ export const RegisterButton = styled.button`
 
     color: #000000;
 `
+
+// background: ${props => props.page === 'login' ? '#FFFFFF' : '#580EA2'};

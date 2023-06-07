@@ -15,13 +15,13 @@ export function AppRoutes( {setUser, user} ) {
     <Routes>
       <Route element={<ProtectedRoute isAllowed={Boolean(user)} />}>
         <Route path="/" element={<MainPage />} />
+        <Route path="/mytracks" element={<MyTracksPage />} />
+        <Route path="/playlistoftheday" element={<PlaylistOfTheDayPage />} />
+        <Route path="/dancinghits" element={<DancingHitsPage />} />
+        <Route path="/indie" element={<IndiePage />} />
       </Route>
       <Route path="/login" element={<LoginPage setUser={setUser} />} />
       <Route path="/register" element={<RegisterPage />} />
-      <Route path="/mytracks" element={<MyTracksPage />} />
-      <Route path="/playlistoftheday" element={<PlaylistOfTheDayPage />} />
-      <Route path="/dancinghits" element={<DancingHitsPage />} />
-      <Route path="/indie" element={<IndiePage />} />
     </Routes>
   );
 }

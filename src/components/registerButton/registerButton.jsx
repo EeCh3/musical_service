@@ -1,9 +1,9 @@
 /* eslint-disable react/self-closing-comp */
 import * as S from "./registerButton.style";
 
-function RegisterButton({onClick}) {
+function RegisterButton({onClick, style}) {
   return (
-    <S.RegisterButton onClick={onClick}>Зарегистрироваться</S.RegisterButton>
+    <S.RegisterButton style={style} onClick={onClick}>Зарегистрироваться</S.RegisterButton>
   );
 }
 
