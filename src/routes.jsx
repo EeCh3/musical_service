@@ -10,13 +10,13 @@ import { DancingHitsPage } from "./pages/dancingHits/dancingHitsPage";
 import { IndiePage } from "./pages/indie/indiePage";
 import { ProtectedRoute } from './components/protectedRoute/protectedRoute';
 
-export function AppRoutes( {user} ) {
+export function AppRoutes( {setUser, user} ) {
   return (
     <Routes>
       <Route element={<ProtectedRoute isAllowed={Boolean(user)} />}>
         <Route path="/" element={<MainPage />} />
       </Route>
-      <Route path="/login" element={<LoginPage />} />
+      <Route path="/login" element={<LoginPage setUser={setUser} />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/mytracks" element={<MyTracksPage />} />
       <Route path="/playlistoftheday" element={<PlaylistOfTheDayPage />} />

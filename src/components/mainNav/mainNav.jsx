@@ -2,8 +2,8 @@
 import { useState } from "react";
 
 import logo from "../../fonts and style/img/logo.png";
-import Burger from "../burger/burger.jsx";
-import BurgerMenu from "../burgerMenu/burgerMenu.jsx";
+import Burger from "../burger/burger";
+import BurgerMenu from "../burgerMenu/burgerMenu";
 
 import * as S from "./mainNav.style";
 
