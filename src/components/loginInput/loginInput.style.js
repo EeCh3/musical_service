@@ -4,19 +4,14 @@ import styled from "styled-components";
 export const LoginInput = styled.input`
     width: 278.5px;
 
-    left: 40.5px;
-    top: 138px;
+    height: 50px;
 
-    border: 1px solid #D0CECE;
+
+    border: none;
+    border-bottom: 1px solid #D0CECE;
     ::placeholder {
-        width: 50px;
-        height: 24px;
-        left: 41px;
-        top: 106px;
-
         font-size: 18px;
         line-height: 24px;
-
         color: #E1E1E1;
       }
 `;

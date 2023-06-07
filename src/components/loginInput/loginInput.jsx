@@ -3,7 +3,7 @@ import * as S from "./loginInput.style";
 
 function LoginInput({setUser}) {
   return (
-    <S.LoginInput setUser={setUser}></S.LoginInput>
+    <S.LoginInput placeholder="Логин" setUser={setUser}></S.LoginInput>
   );
 }
 

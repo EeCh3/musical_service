@@ -3,7 +3,7 @@ import * as S from "./passwordInput.style";
 
 function PasswordInput() {
   return (
-    <S.PasswordInput></S.PasswordInput>
+    <S.PasswordInput placeholder="Пароль"></S.PasswordInput>
   );
 }
 

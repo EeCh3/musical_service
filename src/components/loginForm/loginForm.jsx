@@ -9,6 +9,7 @@ import LoginInput from "../loginInput/loginInput";
 import PasswordInput from "../passwordInput/passwordInput";
 import LoginButton from "../loginButton/loginButton";
 import RegisterButton from "../registerButton/registerButton";
+import logoBlack from "../../fonts and style/img/logo_black.png"
 
 function LoginForm({setUser}) {
   const [username, setUsername] = useState('');
@@ -38,10 +39,17 @@ function LoginForm({setUser}) {
       <Wrapper>
         <Container>
           <S.LoginBox>
-            <LoginInput placeholder="Логин" value={username} onChange={handleUsernameChange}></LoginInput>
-            <PasswordInput placeholder="Пароль" value={password} onChange={handlePasswordChange}></PasswordInput>
-            <LoginButton onClick={handleLogin}>Войти</LoginButton>
-            <RegisterButton onClick={handleRegister}>Зарегистрироваться</RegisterButton>
+            <S.LogoDiv>
+              <S.LogoBlack src={logoBlack} alt="logoBlack"></S.LogoBlack> 
+            </S.LogoDiv>
+            <S.InputsDiv>
+              <LoginInput placeholder="Логин" value={username} onChange={handleUsernameChange}></LoginInput>
+              <PasswordInput placeholder="Пароль" value={password} onChange={handlePasswordChange}></PasswordInput> 
+            </S.InputsDiv>
+            <S.ButtonsDiv>
+              <LoginButton onClick={handleLogin}>Войти</LoginButton>
+              <RegisterButton onClick={handleRegister}>Зарегистрироваться</RegisterButton> 
+            </S.ButtonsDiv>
           </S.LoginBox>
         </Container>
       </Wrapper>
