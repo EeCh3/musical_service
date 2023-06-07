@@ -22,11 +22,8 @@ export const LogoDiv = styled.div`
     margin-top: 20px;
 `;
 
-export const LogoBlack = styled.div`
-  width: 113.33px;
-  height: 43px;
-  padding: 13px 0 13px 0;
-  background-color: transparent;
+export const LogoBlack = styled.img`
+  padding: 23px 0 13px 0;
   margin-bottom: 20px;
 `;
 
