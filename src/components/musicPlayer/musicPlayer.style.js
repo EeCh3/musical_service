@@ -17,10 +17,25 @@ export const BarContent = styled.div`
      -ms-flex-direction: column;
          flex-direction: column;
 `;
+export const Thumb = styled.div`
+    width: var(--thumb-width);
+    height: var(--thumb-height);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.753);
+    z-index: 3;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    pointer-events: none; 
+    user-select: none; 
+`
 
-export const BarPlayerProgress = styled.div`
+export const BarPlayerProgress = styled.input`
  width: 100%;
  background: #2E2E2E;
+ height: 5px;
+ curcor: pointer;
 `;
 
 export const BarPlayerBlock = styled.div`

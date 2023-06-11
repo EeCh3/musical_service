@@ -1,34 +1,97 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable no-unused-vars */
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 import sprite from "../../fonts and style/img/icon/sprite.svg";
+import song from "../../Bobby_Marleni_-_Dropin.mp3";
 
 import * as S from "./musicPlayer.style";
 
  function MusicPlayer() {
+  const [percentage, setPercentage] = useState(0)
   const [isLoading, setIsLoading] = useState(true);
+  const audioRef = useRef()
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [duration, setDuration] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [position, setPosition] = useState(0)
+
+  const [marginLeft, setMarginLeft] = useState(0)
+  const [progressBarWidth, setProgressBarWidth] = useState(0)
+
+  const rangeRef = useRef()
+  const thumbRef = useRef()
+
+  const onChange = (e) => {
+    const audio = audioRef.current
+    audio.currentTime = (audio.duration / 100) * e.target.value
+    setPercentage(e.target.value)
+  }
+
+  const play = () => {
+    const audio = audioRef.current
+
+    if(!isPlaying) {
+      setIsPlaying(true)
+        audio.play()
+    } else if (isPlaying) {
+      setIsPlaying(false)
+      audio.pause()
+    }
+  }
+
+  const getCurrentDuration = (e) => {
+    const percent = ((e.currentTarget.currentTime / e.currentTarget.duration) * 100).toFixed(2)
+    const time = e.currentTarget.currentTime
+
+    setPercentage(+percent)
+    setCurrentTime(time.toFixed(2))
+  }
 
   useEffect(() => {
+    const rangeWidth = rangeRef.current.getBoundingClientRect().width
+    const thumbWidth = thumbRef.current.getBoundingClientRect().width
+    const centerThumb = (thumbWidth / 100) * percentage * -1
+    const centerProgressBar =
+      thumbWidth + (rangeWidth / 100) * percentage - (thumbWidth / 100) * percentage
+    setPosition(percentage)
+    setMarginLeft(centerThumb)
+    setProgressBarWidth(centerProgressBar)
+
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 5000);
 
-    return () => clearTimeout(timer);
-  }, []);
+      return () => clearTimeout(timer);
+  }, [percentage]);
+
     return (
       <S.Bar className="bar">
         <S.BarContent className="bar__content">
-          <S.BarPlayerProgress>
+          <S.Thumb
+            ref={thumbRef}
+            style={{
+              left: `${position}%`,
+              marginLeft: `${marginLeft}px`
+            }} />
+          <S.BarPlayerProgress         
+            type='range'
+            value={position}
+            ref={rangeRef}
+            step='0.01'
+            onChange={onChange}
+            />         
             <S.BarPlayerBlock>
-              <S.BarPlayer>
+              <S.BarPlayer >
+                <audio ref={audioRef} src={song} onTimeUpdate={getCurrentDuration} onLoadedData={(e) => {setDuration(e.currentTarget.duration)}}></audio>
                 <S.PlayerControls>
                   <S.PlayerButtonPrev>
                     <S.PlayerButtonPrevSvg><use xlinkHref={`${sprite}#icon-prev`}/></S.PlayerButtonPrevSvg>
                   </S.PlayerButtonPrev>
-                  <S.PlayerButtonPlay>
-                    <S.PlayerButtonPlaySvg><use xlinkHref={`${sprite}#icon-play`}/></S.PlayerButtonPlaySvg>
+                  <S.PlayerButtonPlay onClick={play}>
+                    <S.PlayerButtonPlaySvg><use xlinkHref={isPlaying ? `${sprite}#icon-pause` : `${sprite}#icon-play`}/></S.PlayerButtonPlaySvg>
                   </S.PlayerButtonPlay>
                   <S.PlayerButtonNext>
                     <S.PlayerButtonNextSvg><use xlinkHref={`${sprite}#icon-next`}/></S.PlayerButtonNextSvg>
@@ -85,97 +148,8 @@ import * as S from "./musicPlayer.style";
                 </S.VolumeContent>
               </div>
             </S.BarPlayerBlock>
-          </S.BarPlayerProgress>
         </S.BarContent>
       </S.Bar>
-      // <div className="bar">
-      //   <div className="bar__content">
-      //     <div className="bar__player-progress" />
-      //     <div className="bar__player-block">
-      //       <div className="bar__player player">
-      //         <div className="player__controls">
-      //           <div className="player__btn-prev">
-      //             <svg className="player__btn-prev-svg" alt="prev">
-      //                <use xlinkHref={`${sprite}#icon-prev`} />
-      //             </svg>
-      //           </div>
-      //           <div className="player__btn-play _btn">
-      //             <svg className="player__btn-play-svg" alt="play">
-      //             <use xlinkHref={`${sprite}#icon-play`} />
-      //             </svg>
-      //           </div>
-      //           <div className="player__btn-next">
-      //             <svg className="player__btn-next-svg" alt="next">
-      //             <use xlinkHref={`${sprite}#icon-next`} />
-      //             </svg>
-      //           </div>
-      //           <div className="player__btn-repeat _btn-icon">
-      //             <svg className="player__btn-repeat-svg" alt="repeat">
-      //             <use xlinkHref={`${sprite}#icon-repeat`} />
-      //             </svg>
-      //           </div>
-      //           <div className="player__btn-shuffle _btn-icon">
-      //             <svg className="player__btn-shuffle-svg" alt="shuffle">
-      //             <use xlinkHref={`${sprite}#icon-shuffle`} />
-      //             </svg>
-      //           </div>
-      //         </div>
-      //         <div className="player__track-play track-play">
-      //           <div className="track-play__contain">
-      //           <div className="track-play__image">
-      //           {isLoading ? (
-      //             <Skeleton count={1} width={51} height={51} />
-      //             ) : (
-      //               <svg className="track-play__svg" alt="music">
-      //               <use xlinkHref={`${sprite}#icon-note`} />
-      //               </svg>
-      //             )}
-      //           </div>
-      //             <div className="track-play__author">
-      //               {isLoading ? (
-      //                 <Skeleton count={1} />
-      //                 ) : (
-      //                   <a className="track-play__author-link" href="http://">Ты та...</a>
-      //                 )}
-      //             </div>
-      //             <div className="track-play__album">
-      //               {isLoading ? (
-      //                   <Skeleton count={1} />
-      //                   ) : (
-      //                     <a className="track-play__album-link" href="http://">Баста</a>
-      //                   )}
-      //             </div>
-      //           </div>
-  
-      //           <div className="track-play__like-dis">
-      //             <div className="track-play__like _btn-icon">
-      //               <svg className="track-play__like-svg" alt="like">
-      //               <use xlinkHref={`${sprite}#icon-like`} />
-      //               </svg>
-      //             </div>
-      //             <div className="track-play__dislike _btn-icon">
-      //               <svg className="track-play__dislike-svg" alt="dislike">
-      //               <use xlinkHref={`${sprite}#icon-dislike`} />
-      //               </svg>
-      //             </div>
-      //           </div>
-      //         </div>
-      //       </div>
-      //       <div className="bar__volume-block volume">
-      //         <div className="volume__content">
-      //           <div className="volume__image">
-      //             <svg className="volume__svg" alt="volume">
-      //             <use xlinkHref={`${sprite}#icon-volume`} />
-      //             </svg>
-      //           </div>
-      //           <div className="volume__progress _btn">
-      //             <input className="volume__progress-line _btn" type="range" name="range" />
-      //           </div>
-      //         </div>
-      //       </div>
-      // </div>
-      // </div>
-      // </div>
     );
   };
 
