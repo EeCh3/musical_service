@@ -70,13 +70,13 @@ body {
   cursor: pointer;
 }
 
-._btn-text:active {
+._btn-text_active {
   border-color: #AD61FF;
   color: #AD61FF;
   cursor: pointer;
 }
 
-._btn-icon:active svg {
+._btn-icon_active svg {
   fill: transparent;
   stroke: #FFFFFF;
   cursor: pointer;
@@ -87,6 +87,29 @@ body {
   fill: #696969;
   stroke: #FFFFFF;
   cursor: pointer;
+}
+
+.filter__options {
+  position: absolute;
+
+
+  z-index: 2;
+  z-index:2;
+  background-color: #313131;
+  width: 248px;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 34px;
+  gap: 10px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  color: #B672FF;
 }
 
 .main {
@@ -206,6 +229,8 @@ body {
 }
 
 .centerblock__filter {
+  position: relative;
+  z-index: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -217,6 +242,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 51px;
+  gap: 10px;
 }
 
 .centerblock__content {
@@ -300,14 +326,14 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid;
   border-radius: 60px;
   padding: 6px 20px;
 }
 
-.filter__button:not(:last-child) {
+/* .filter__button:not(:last-child) {
   margin-right: 10px;
-}
+} */
 
 .content__title {
   display: -webkit-box;
