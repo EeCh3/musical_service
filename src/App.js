@@ -1,15 +1,9 @@
+/* eslint-disable react/jsx-no-constructed-context-values */
 // import './fonts and style/css/style.css';
 import { useState } from "react";
 import { createGlobalStyle } from "styled-components";
 import { AppRoutes } from "./routes";
-
-// import Wrapper from "./components/Wrapper/Wrapper";
-// import Container from "./components/Container/Container";
-// import Main from "./components/Main/Main";
-// import MainNav from "./components/mainNav/mainNav";
-// import CenterBlock from "./components/centerBlock/centerBlock";
-// import Sidebar from "./components/sidebar/sidebar";
-// import MusicPlayer from "./components/musicPlayer/musicPlayer";
+import {ThemeContext, themes} from "./context/themeContext";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -33,32 +27,27 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-// function App() {
-//   return (
-//     <>
-//       <GlobalStyle/>
-//       <Wrapper>
-//         <Container>
-//         <AppRoutes/>
-//             <Main> 
-//               <MainNav/>
-//               <CenterBlock/>
-//               <Sidebar/>
-//               <MusicPlayer/>
-//             </Main>
-//         </Container>
-//       </Wrapper>
-//     </>
-//    )
-// }
-
 function App() {
   const [user, setUser] = useState(null);
+  const [currentTheme, setCurrentTheme] = useState(themes.light);
+
+  const toggleTheme = () => {
+    if (currentTheme === themes.dark) {
+      setCurrentTheme(themes.light);
+      return;
+    }
+
+    setCurrentTheme(themes.dark);
+  };
+
   return (
-    <>
-      <GlobalStyle/>
+
+    <ThemeContext.Provider value={{ theme: currentTheme, toggleTheme }}>
+            <GlobalStyle/>
         <AppRoutes user={user} setUser={setUser}/>
-    </>
+    </ThemeContext.Provider>
+
+
    )
 }
 

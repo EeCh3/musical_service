@@ -4,6 +4,7 @@ import { useState } from "react";
 import logo from "../../fonts and style/img/logo.png";
 import Burger from "../burger/burger";
 import BurgerMenu from "../burgerMenu/burgerMenu";
+import ThemeButton from '../themeButton/themeButton';
 
 import * as S from "./mainNav.style";
 
@@ -18,6 +19,7 @@ function MainNav() {
         </S.NavLogo>
         <Burger onClick = {toggleVisibility} />
       {visible && <BurgerMenu/>}
+      <ThemeButton/>
       </S.Nav>
     );
   }
