@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
-import {useThemeContext} from "react";
+import {useThemeContext} from "../../context/themeContext";
 import * as S from "./Main.style";
 
 

@@ -3,6 +3,7 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect, useRef } from 'react';
 import Skeleton from 'react-loading-skeleton';
+import {useThemeContext} from "../../context/themeContext";
 import 'react-loading-skeleton/dist/skeleton.css'
 import sprite from "../../fonts and style/img/icon/sprite.svg";
 import song from "../../Bobby_Marleni_-_Dropin.mp3";
@@ -10,6 +11,8 @@ import song from "../../Bobby_Marleni_-_Dropin.mp3";
 import * as S from "./musicPlayer.style";
 
  function MusicPlayer() {
+  const { theme } = useThemeContext();
+
   const [percentage, setPercentage] = useState(0)
   const [isLoading, setIsLoading] = useState(true);
   const audioRef = useRef()
@@ -68,7 +71,10 @@ import * as S from "./musicPlayer.style";
   }, [percentage]);
 
     return (
-      <S.Bar className="bar">
+      <S.Bar className="bar"style={{
+        backgroundColor: theme.background,
+        color: theme.color,
+      }}>
         <S.BarContent className="bar__content">
           <S.Thumb
             ref={thumbRef}
