@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import { themes } from "../../context/themeContext";
 
 export const Nav = styled.nav`
   width: 244px;
-  background-color: #181818;
+  background-color:${themes === 'dark' ? "#181818" : "#F6F5F3"} ;
+
   padding: 20px 0 20px 36px;
 `;
 

@@ -16,10 +16,7 @@ function MainNav() {
   const toggleVisibility = () => setVisible(!visible)
   
     return (
-      <S.Nav style={{
-        backgroundColor: theme === 'light' ? "#F6F5F3" : theme.color,
-        color: theme.color,
-      }}>
+      <S.Nav theme={theme}>
         <S.NavLogo>
           <S.LogoImage src={logo} alt="logo"></S.LogoImage>
         </S.NavLogo>
