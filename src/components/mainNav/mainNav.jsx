@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { useThemeContext} from "../../context/themeContext";
 
-import logo from "../../fonts and style/img/logo.png";
 import Burger from "../burger/burger";
 import BurgerMenu from "../burgerMenu/burgerMenu";
 import ThemeButton from '../themeButton/themeButton';
@@ -18,7 +17,7 @@ function MainNav() {
     return (
       <S.Nav theme={theme}>
         <S.NavLogo>
-          <S.LogoImage src={logo} alt="logo"></S.LogoImage>
+          <S.LogoImage theme={theme} src={theme.navLogoImage} alt="logo"></S.LogoImage>
         </S.NavLogo>
         <Burger onClick = {toggleVisibility} />
       {visible && <BurgerMenu/>}

@@ -122,14 +122,14 @@ import * as S from "./musicPlayer.style";
                     {isLoading ? (
                         <Skeleton count={1}/>
                         ) : (
-                          <S.TrackPlayAuthorLink href="http://">Ты та...</S.TrackPlayAuthorLink>
+                          <S.TrackPlayAuthorLink theme={theme} href="http://">Ты та...</S.TrackPlayAuthorLink>
                         )}
                     </S.TrackPlayAuthor>
                     <S.TrackPlayAlbum>
                       {isLoading ? (
                           <Skeleton count={1}/>
                           ) : (
-                            <S.TrackPlayAlbumLink href="http://">Баста</S.TrackPlayAlbumLink>
+                            <S.TrackPlayAlbumLink theme={theme} href="http://">Баста</S.TrackPlayAlbumLink>
                           )}
                     </S.TrackPlayAlbum>
                   </S.TrackPlayContain>

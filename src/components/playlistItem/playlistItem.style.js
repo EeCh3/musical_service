@@ -76,7 +76,7 @@ export const TrackTitleLink = styled.a`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: ${(props) => props.theme.trackTitleColor};
 `;
 
 export const TrackTitleSpan = styled.span`
@@ -102,7 +102,7 @@ export const TrackAuthorLink = styled.a`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: ${(props) => props.theme.trackAuthorColor};
   text-align: left;
 `;
 

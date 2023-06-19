@@ -2,10 +2,12 @@
 import { useState, useEffect } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
+import { useThemeContext} from "../../context/themeContext";
 
 import * as S from "./playlistItem.style";
 
 function PlaylistItem() {
+  const { theme } = useThemeContext();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -32,7 +34,7 @@ function PlaylistItem() {
               {isLoading ? (
                 <Skeleton count={1} width={350}/>
               ) : (    
-                <S.TrackTitleLink>Guilt<S.TrackTitleSpan></S.TrackTitleSpan></S.TrackTitleLink>
+                <S.TrackTitleLink theme={theme}>Guilt<S.TrackTitleSpan></S.TrackTitleSpan></S.TrackTitleLink>
               )}
             </div>
           </S.TrackTitle>
@@ -40,7 +42,7 @@ function PlaylistItem() {
             {isLoading ? (
               <Skeleton count={1} width={300}/>
             ) : (    
-              <S.TrackAuthorLink href="http://">Nero</S.TrackAuthorLink>      
+              <S.TrackAuthorLink theme={theme} href="http://">Nero</S.TrackAuthorLink>      
             )}
           </S.TrackAuthor>
           <S.TrackAlbum>

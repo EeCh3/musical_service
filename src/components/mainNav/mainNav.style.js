@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Nav = styled.nav`
   width: 244px;
-  background-color:${(props) => (props.theme === 'dark' ? "#181818" : "#F6F5F3")} ;
+  background-color: ${(props) => props.theme.navBackgroundColor};
   padding: 20px 0 20px 36px;
 `;
 
@@ -17,7 +17,6 @@ export const NavLogo = styled.div`
 export const LogoImage = styled.img`
   width: 113.33px;
   height: 17px;
-  color: #181818;
 `;
 
 

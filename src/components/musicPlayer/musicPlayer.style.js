@@ -207,7 +207,7 @@ export const TrackPlayAuthorLink = styled.a`
  font-weight: 400;
  font-size: 16px;
  line-height: 24px;
- color: #FFFFFF;
+ color: ${(props) => props.theme.trackPlayAuthorColor};
  white-space: nowrap;
 `;
 
@@ -223,7 +223,7 @@ export const TrackPlayAlbumLink = styled.a`
  font-weight: 400;
  font-size: 13px;
  line-height: 24px;
- color: #FFFFFF;
+ color: ${(props) => props.theme.trackPlayAlbumColor};
 `;
 
 export const TrackPlayLikeDis = styled.div`

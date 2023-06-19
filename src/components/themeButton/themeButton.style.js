@@ -2,11 +2,21 @@
 import styled from "styled-components";
 
 export const ThemeButton = styled.button`
+display: flex;
+justify-content: center;
+align-items: center;
+border-color: ${(props) => props.theme.themeButtonBorderColor};
+background-color: ${(props) => props.theme.themeButtonBackgroundColor};
+margin-top: 26px;
+
 font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  border: 1px solid;
+  box-sizing: border-box;
+  width: 39px;
+  height: 39px;
+  border: 1px solid ;
   border-radius: 60px;
   padding: 6px 20px;
 
@@ -22,3 +32,4 @@ font-style: normal;
     cursor: pointer;
   }
 `
+

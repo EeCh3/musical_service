@@ -8,9 +8,12 @@ import sidebarImg from "../../fonts and style/img/playlist01.png";
 import sidebarImg2 from "../../fonts and style/img/playlist02.png";
 import sidebarImg3 from "../../fonts and style/img/playlist03.png";
 
+import { useThemeContext} from "../../context/themeContext";
+
 import * as S from "./sidebar.style";
 
 function Sidebar() {
+  const { theme } = useThemeContext();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -24,7 +27,7 @@ function Sidebar() {
   return (
     <S.MainSidebar>
       <S.SidebarPersonal>
-        <S.SidebarPersonalName>Sergey.Ivanov</S.SidebarPersonalName>
+        <S.SidebarPersonalName theme={theme}>Sergey.Ivanov</S.SidebarPersonalName>
         <S.SidebarAvatar></S.SidebarAvatar>
       </S.SidebarPersonal>
       <S.SidebarBlock>
