@@ -19,7 +19,8 @@ export const themes = {
       trackPlayAlbumColor: "#000000",
       navLogoImage: logoBlack,
       themeButtonBorderColor: "#181818",
-      themeButtonImg: lightThemeImg
+      themeButtonImg: lightThemeImg,
+      searchPlaceholderColor: "#000000"
     },
     dark: {
       color: '#FFFFFF',
@@ -36,7 +37,8 @@ export const themes = {
       navLogoImage: logo,
       themeButtonBackgroundColor: "#181818",
       themeButtonBorderColor: "#FFFFFF",
-      themeButtonImg: darkThemeImg
+      themeButtonImg: darkThemeImg,
+      searchPlaceholderColor: "#FFFFFF"
     },
   };
   

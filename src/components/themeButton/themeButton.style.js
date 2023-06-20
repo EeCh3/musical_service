@@ -16,7 +16,6 @@ font-style: normal;
   box-sizing: border-box;
   width: 39px;
   height: 39px;
-  border: 1px solid ;
   border-radius: 60px;
   padding: 6px 20px;
 

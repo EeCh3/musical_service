@@ -47,7 +47,7 @@ export const SearchText = styled.input`
     color: #FFFFFF;
     ::placeholder {
         background-color: transparent;
-        color: #FFFFFF;
+        color: ${(props) => props.theme.searchPlaceholderColor};
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
