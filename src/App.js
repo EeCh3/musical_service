@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [email, setEmail] = useState(null);
   const [currentTheme, setCurrentTheme] = useState(themes.light);
 
   const toggleTheme = () => {
@@ -44,7 +44,7 @@ function App() {
 
     <ThemeContext.Provider value={{ theme: currentTheme, toggleTheme }}>
             <GlobalStyle/>
-        <AppRoutes user={user} setUser={setUser}/>
+        <AppRoutes email={email} setEmail={setEmail}/>
     </ThemeContext.Provider>
 
 

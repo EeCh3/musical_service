@@ -10,18 +10,18 @@ import { DancingHitsPage } from "./pages/dancingHits/dancingHitsPage";
 import { IndiePage } from "./pages/indie/indiePage";
 import { ProtectedRoute } from './components/protectedRoute/protectedRoute';
 
-export function AppRoutes( {setUser, user} ) {
+export function AppRoutes( {setEmail, email} ) {
   return (
     <Routes>
-      <Route element={<ProtectedRoute isAllowed={Boolean(user)} />}>
+      <Route path="/login" element={<LoginPage setEmail={setEmail} />} />
+      <Route path="/register" element={<RegisterPage />} />
+      <Route element={<ProtectedRoute isAllowed={Boolean(email)} />}>
         <Route path="/" element={<MainPage />} />
         <Route path="/mytracks" element={<MyTracksPage />} />
         <Route path="/playlistoftheday" element={<PlaylistOfTheDayPage />} />
         <Route path="/dancinghits" element={<DancingHitsPage />} />
         <Route path="/indie" element={<IndiePage />} />
       </Route>
-      <Route path="/login" element={<LoginPage setUser={setUser} />} />
-      <Route path="/register" element={<RegisterPage />} />
     </Routes>
   );
 }
