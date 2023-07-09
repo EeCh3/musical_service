@@ -1,6 +1,9 @@
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/self-closing-comp */
 // import styled from "styled-components";
-import PlaylistItem from "../playlistItem/playlistItem";
+// import PlaylistItem from "../playlistItem/playlistItem";
+import Playlist from "../playlistItem/playlistTracks";
 import FilterBlock from "../filterBlock/filterBlock"
 import { useThemeContext } from "../../context/themeContext";
 
@@ -24,9 +27,11 @@ import * as S from "./centerBlock.style";
                     <S.PlaylistTitleCol>ТРЕК</S.PlaylistTitleCol>
                     <S.PlaylistTitleCol2>ИСПОЛНИТЕЛЬ</S.PlaylistTitleCol2>
                     <S.PlaylistTitleCol3>АЛЬБОМ</S.PlaylistTitleCol3>
-                    <S.PlaylistTitleCol4></S.PlaylistTitleCol4>
+                    <S.PlaylistTitleCol4>
+                        <img theme={theme} src={theme.trackTimeImg}></img>   
+                    </S.PlaylistTitleCol4>                    
                 </S.PlaylistTitle>
-                <PlaylistItem/>
+                <Playlist/>
             </S.CenterBlockContent>
         </S.MainCenterBlock>
     );

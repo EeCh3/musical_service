@@ -91,20 +91,12 @@ export const CenterBlockContent =  styled.div`
 `;
 
 export const PlaylistTitle = styled.div`
-    display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
         flex-direction: row;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
+        padding-left: 40px;
         margin-bottom: 24px;
+        width: 1043px;
 `;
 
 export const PlaylistTitleCol = styled.div`
@@ -115,8 +107,8 @@ export const PlaylistTitleCol = styled.div`
     letter-spacing: 2px;
     color: #696969;
     text-transform: uppercase;
+    width: 433px
 
-    width: 447px;
 `;
 
 export const PlaylistTitleCol2 = styled.div`
@@ -128,7 +120,7 @@ export const PlaylistTitleCol2 = styled.div`
     color: #696969;
     text-transform: uppercase;
 
-    width: 321px;
+    width: 311px;
 `;
 
 export const PlaylistTitleCol3 = styled.div`
@@ -140,18 +132,9 @@ export const PlaylistTitleCol3 = styled.div`
     color: #696969;
     text-transform: uppercase;
 
-    width: 245px;
+    width: 237px;
 `;
 
 export const PlaylistTitleCol4 = styled.div`
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 2px;
-    color: #696969;
-    text-transform: uppercase;
-
-    width: 60px;
-    text-align: end;
+    padding-left: 20px;
 `;

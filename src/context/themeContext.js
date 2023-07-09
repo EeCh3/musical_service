@@ -3,6 +3,8 @@ import logo from "../fonts and style/img/logo.png";
 import logoBlack from "../fonts and style/img/logo_black.png";
 import lightThemeImg from "../fonts and style/img/light_theme.png"
 import darkThemeImg from "../fonts and style/img/dark_theme.png"
+import TrackTimeImgDark from "../fonts and style/img/TrackTimeDark.png"
+import TrackTimeImgLight from "../fonts and style/img/TrackTimeLight.png"
 
 export const themes = {
     light: {
@@ -20,7 +22,8 @@ export const themes = {
       navLogoImage: logoBlack,
       themeButtonBorderColor: "#181818",
       themeButtonImg: lightThemeImg,
-      searchPlaceholderColor: "#000000"
+      searchPlaceholderColor: "#000000",
+      trackTimeImg: TrackTimeImgLight
     },
     dark: {
       color: '#FFFFFF',
@@ -38,7 +41,8 @@ export const themes = {
       themeButtonBackgroundColor: "#181818",
       themeButtonBorderColor: "#FFFFFF",
       themeButtonImg: darkThemeImg,
-      searchPlaceholderColor: "#FFFFFF"
+      searchPlaceholderColor: "#FFFFFF",
+      trackTimeImg: TrackTimeImgDark
     },
   };
   

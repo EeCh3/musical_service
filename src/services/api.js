@@ -49,6 +49,20 @@ export const api = createApi({
     getAllTracks: builder.query({
       query: () => '/catalog/track/all/',
     }),
+
+    setLike: builder.mutation({
+      query: (id) => ({
+        url: `/catalog/track/${id}/favorite/`,
+        method: 'POST',
+      }),
+    }),
+
+    setDislike: builder.mutation({
+      query: (id) => ({
+        url: `/catalog/track/${id}/favorite/`,
+        method: 'DELETE',
+      })
+    }),
   }),
 });
 
@@ -60,4 +74,6 @@ export const {
   useGetFavTracksQuery,
   useGetSelectionByIdQuery,
   useGetAllTracksQuery,
+  useSetLikeMutation,
+  useSetDislikeMutation
 } = api;

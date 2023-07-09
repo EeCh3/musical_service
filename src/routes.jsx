@@ -10,12 +10,13 @@ import { DancingHitsPage } from "./pages/dancingHits/dancingHitsPage";
 import { IndiePage } from "./pages/indie/indiePage";
 import { ProtectedRoute } from './components/protectedRoute/protectedRoute';
 
-export function AppRoutes( {setEmail, email} ) {
+export function AppRoutes( {setEmail} ) {
+  const token = localStorage.getItem('token'); 
   return (
     <Routes>
       <Route path="/login" element={<LoginPage setEmail={setEmail} />} />
       <Route path="/register" element={<RegisterPage />} />
-      <Route element={<ProtectedRoute isAllowed={Boolean(email)} />}>
+      <Route element={<ProtectedRoute isAllowed={Boolean(token)} />}>
         <Route path="/" element={<MainPage />} />
         <Route path="/mytracks" element={<MyTracksPage />} />
         <Route path="/playlistoftheday" element={<PlaylistOfTheDayPage />} />
