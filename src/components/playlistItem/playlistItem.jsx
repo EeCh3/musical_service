@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-alert */
 /* eslint-disable camelcase */
 /* eslint-disable react/self-closing-comp */
 import { useDispatch } from 'react-redux';
@@ -23,22 +25,26 @@ function PlaylistItem({track}) {
   const [isFavourite, setFavourite] = useState(false)
   
   useEffect(() => {
-    setFavourite(
-      stared_user.some((user) => Number(user.id) === Number(userId))
-    );
-  }, [track]);
+    if (stared_user) {
+        setFavourite(stared_user.some((user) => user.id === userId));
+    } else {
+        setFavourite(false);
+    }}, [stared_user, userId]);
 
   const handleFavorite = () => {
     if (isFavourite) postDislike(trackID)
     else postLike(trackID)
+    alert(`added`)
   }
 
-  const handleOnRowClick = () => {
-    dispatch(setCurrentTrack({
-        track,
-        })
+  const handlesetCurrentTrack = () => {
+    dispatch(
+      setCurrentTrack({
+        track
+      })
     );
-  }
+  };
+
   const { theme } = useThemeContext();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -52,7 +58,7 @@ function PlaylistItem({track}) {
 
   return (
     <S.ContentPlaylist>
-      <S.Item onClick={() => handleOnRowClick()}>
+      <S.Item onClick={() => handlesetCurrentTrack()}>
         <S.PlaylistTrack>
           <S.TrackTitle>
             <S.TrackTitleImage>
@@ -88,7 +94,7 @@ function PlaylistItem({track}) {
             <Skeleton count={1}/>
           ) : (    
             <div className="track__time">   
-              <S.TrackTimeSvg xlinkHref="/musical_service/src/fonts and style/img/icon/sprite.svg#icon-like" onClick={handleFavorite}><use xlinkHref={`${sprite}#icon-like`} fill={isFavourite ? 'blueviolet' : 'gray'} /></S.TrackTimeSvg>
+              <S.TrackTimeSvg xlinkHref="/musical_service/src/fonts and style/img/icon/sprite.svg#icon-like" onClick={handleFavorite}><use xlinkHref={`${sprite}#icon-like`} fill={isFavourite ? 'red' : 'gray'} /></S.TrackTimeSvg>
               <S.TrackTimeText>{(duration_in_seconds / 60).toFixed(2)}</S.TrackTimeText>
             </div>   
           )}

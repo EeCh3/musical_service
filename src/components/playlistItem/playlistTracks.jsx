@@ -7,15 +7,10 @@ function Playlist() {
   const playlistItems = data.map((item) => (
     <PlaylistItem
       key={item.id}
-      track={{
-        id: item.id,
-        title: item.name,
-        author: item.author,
-        album: item.album,
-        time: (item.duration_in_seconds / 60).toFixed(2),
-      }}
+      track={item}
     />
   ));
+
   return (
     <S.TrackListContainer>
       <ul>
